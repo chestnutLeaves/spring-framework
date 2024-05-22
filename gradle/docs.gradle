@@ -18,8 +18,14 @@ import org.asciidoctor.gradle.AsciidoctorTask
 
 buildscript {
 	repositories {
-		gradlePluginPortal()
-		maven { url "https://repo.spring.io/plugins-release" }
+		mavenLocal()
+		maven { url 'https://maven.aliyun.com/content/repositories/spring' }
+		maven { url 'https://maven.aliyun.com/repository/spring-plugin' }
+		maven { url 'https://maven.aliyun.com/repository/public/' }
+		maven { url 'https://maven.aliyun.com/repository/jcente' }
+		mavenCentral()
+		//gradlePluginPortal()
+		//maven { url "https://repo.spring.io/plugins-release" }
 	}
 	dependencies {
 		classpath("org.asciidoctor:asciidoctor-gradle-plugin:1.5.8")
